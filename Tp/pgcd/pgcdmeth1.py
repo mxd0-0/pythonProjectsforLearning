@@ -1,3 +1,5 @@
+from collections import Counter
+
 def gcd_subtraction(a, b):
     while a != b:
         if a > b:
@@ -7,11 +9,10 @@ def gcd_subtraction(a, b):
     return a
 
 def gcd_division(a, b):
-    while b:
+    while b!=0 :
         a, b = b, a % b
     return a
 
-from collections import Counter
 
 def prime_factors(n):
     i = 2
