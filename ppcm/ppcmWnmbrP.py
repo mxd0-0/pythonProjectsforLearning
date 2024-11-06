@@ -16,7 +16,7 @@ def prime_factors(n):
 def ppcm_sans_pgcd(a, b):
     factors_a = Counter(prime_factors(a))
     factors_b = Counter(prime_factors(b))
-    lcm_factors = factors_a | factors_b  # Union of the two counters, taking the max of each prime's count
+    lcm_factors = factors_a | factors_b
     lcm = 1
     for factor in lcm_factors:
         lcm *= factor ** lcm_factors[factor]
